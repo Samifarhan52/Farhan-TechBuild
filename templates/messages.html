@@ -1,0 +1,25 @@
+{% extends 'admin_base.html' %}
+
+{% block content %}
+
+<h1>Contact Messages</h1>
+
+<div class="dashboard-grid">
+
+{% for message in messages %}
+
+<div class="dashboard-card">
+
+<h3>{{ message.name }}</h3>
+
+<p>{{ message.email }}</p>
+
+<p>{{ message.message }}</p>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+{% endblock %}

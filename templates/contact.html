@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="hero">
+
+<div class="app-container">
+
+<h1>Contact Me</h1>
+
+<form method="POST">
+
+<input
+type="text"
+name="name"
+placeholder="Your Name"
+required
+>
+
+<input
+type="email"
+name="email"
+placeholder="Your Email"
+required
+>
+
+<textarea
+name="message"
+placeholder="Your Message"
+rows="5"
+style="
+width:100%;
+padding:15px;
+border-radius:10px;
+margin-top:20px;
+"
+></textarea>
+
+<button type="submit" class="whatsapp-btn">
+    Send Message
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+{% endblock %}

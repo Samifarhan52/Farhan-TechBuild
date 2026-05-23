@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="hero">
+
+<div class="app-container">
+
+    <h1>Stopwatch App</h1>
+
+    <h2 id="time">00:00:00</h2>
+
+    <div class="hero-buttons">
+
+        <button class="btn" onclick="startWatch()">
+            Start
+        </button>
+
+        <button class="btn-outline" onclick="pauseWatch()">
+            Pause
+        </button>
+
+        <button class="btn" onclick="resetWatch()">
+            Reset
+        </button>
+
+    </div>
+
+</div>
+
+</section>
+
+<script>
+
+let seconds = 0;
+let interval = null;
+
+function updateTime(){
+
+    let hrs =
+    String(Math.floor(seconds / 3600)).padStart(2,'0');
+
+    let mins =
+    String(Math.floor((seconds % 3600)/60)).padStart(2,'0');
+
+    let secs =
+    String(seconds % 60).padStart(2,'0');
+
+    document.getElementById('time').innerText =
+    `${hrs}:${mins}:${secs}`;
+}
+
+function startWatch(){
+
+    if(interval) return;
+
+    interval = setInterval(() => {
+
+        seconds++;
+        updateTime();
+
+    },1000);
+}
+
+function pauseWatch(){
+
+    clearInterval(interval);
+    interval = null;
+}
+
+function resetWatch(){
+
+    pauseWatch();
+    seconds = 0;
+    updateTime();
+}
+
+</script>
+
+{% endblock %}

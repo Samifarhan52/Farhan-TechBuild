@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+>
+
+<title>Admin Dashboard</title>
+
+<link
+rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}"
+>
+
+</head>
+
+<body>
+
+<div class="admin-layout">
+
+<div class="sidebar">
+
+<h2>Farhan Admin</h2>
+
+<a href="/admin">Dashboard</a>
+
+<a href="/employees">Employees</a>
+
+<a href="/messages">Messages</a>
+
+<a href="/projects">Projects</a>
+
+<a href="/logout">Logout</a>
+
+</div>
+
+<div class="admin-content">
+
+{% block content %}
+{% endblock %}
+
+</div>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="projects-showcase">
+
+<h2>Employee Management System</h2>
+
+<div class="app-container">
+
+<form method="POST">
+
+<input
+type="text"
+name="name"
+placeholder="Employee Name"
+required
+>
+
+<input
+type="text"
+name="role"
+placeholder="Role"
+required
+>
+
+<input
+type="email"
+name="email"
+placeholder="Email"
+required
+>
+
+<button class="btn">
+Add Employee
+</button>
+
+</form>
+
+</div>
+
+<br><br>
+
+<div class="projects-grid">
+
+{% for employee in employees %}
+
+<div class="project-card">
+
+<h3>{{ employee.name }}</h3>
+
+<p>{{ employee.role }}</p>
+
+<p>{{ employee.email }}</p>
+
+<br>
+
+<a
+href="/delete_employee/{{ employee.id }}"
+class="btn"
+>
+
+Delete
+
+</a>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+</section>
+
+{% endblock %}

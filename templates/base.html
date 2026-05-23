@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Farhan TechBuild</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+
+    <script
+        defer
+        src="{{ url_for('static', filename='js/main.js') }}"
+    ></script>
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Farhan TechBuild
+        </div>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="/">Home</a>
+            </li>
+
+            <li>
+                <a href="/contact">Contact</a>
+            </li>
+
+            <li>
+                <a href="/upload">Upload</a>
+            </li>
+
+            <li>
+                <a href="/login">Login</a>
+            </li>
+
+            <li>
+                <a href="/register">Register</a>
+            </li>
+
+            <!-- MAIN MENU -->
+
+            <li class="dropdown" id="menuDropdown">
+
+<a href="#" class="menu-btn" id="menuToggle">
+☰ Menu
+</a>
+                <div class="dropdown-content">
+
+                    <a href="/dashboard">
+                        Dashboard
+                    </a>
+
+                    <a href="/employees">
+                        Employees
+                    </a>
+
+                    <!-- PROJECTS DROPDOWN -->
+
+                    <button class="dropdown-btn">
+                        Projects ▼
+                    </button>
+
+                    <div class="dropdown-container">
+
+                        <a href="/calculator">
+                            Calculator
+                        </a>
+
+                        <a href="/stopwatch">
+                            Stopwatch
+                        </a>
+
+                        <a href="/todo">
+                            ToDo App
+                        </a>
+
+                        <a href="/tictactoe">
+                            Tic Tac Toe
+                        </a>
+
+                        <a href="/weather">
+                            Weather App
+                        </a>
+
+                        <a href="/qrscanner">
+                            QR Scanner
+                        </a>
+
+                    </div>
+
+                    <a href="/store">
+                        Store
+                    </a>
+
+                    <a href="/social">
+                        Social Platform
+                    </a>
+
+                    <a href="/profile">
+                        Profile
+                    </a>
+
+                    <a href="/chat">
+                        Chat
+                    </a>
+
+                    <a href="/admin">
+                        Admin
+                    </a>
+
+                </div>
+
+            </li>
+
+        </ul>
+
+    </nav>
+
+    <!-- PAGE CONTENT -->
+
+    {% block content %}{% endblock %}
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-container">
+
+            <h2>
+                Farhan TechBuild
+            </h2>
+
+            <p>
+                Developed by Shaik Mohammad Farhanulla Sami
+            </p>
+
+            <div class="footer-links">
+
+                <a href="https://github.com/Samifarhan52">
+                    GitHub
+                </a>
+
+                <a href="https://farhanulla.me/">
+                    Portfolio
+                </a>
+
+                <a href="https://www.linkedin.com/in/shaik-sami-93a38726b">
+                    LinkedIn
+                </a>
+
+            </div>
+
+            <p>
+                © 2026 Farhan TechBuild
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

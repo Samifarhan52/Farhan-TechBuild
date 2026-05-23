@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="hero">
+
+<div class="app-container">
+
+<h1>Welcome {{ user }}</h1>
+
+<p>
+Farhan TechBuild Dashboard
+</p>
+
+<div class="projects-grid">
+
+<div class="project-card">
+<h3>Total Projects</h3>
+<p>15+</p>
+</div>
+
+<div class="project-card">
+<h3>Development Tracks</h3>
+<p>Web • AI • Security</p>
+</div>
+
+<div class="project-card">
+<h3>Status</h3>
+<p>Active Development</p>
+</div>
+
+</div>
+
+<br>
+
+<a href="/logout" class="btn">
+Logout
+</a>
+
+</div>
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,24 @@
+@app.route('/admin')
+def admin():
+
+    if 'user' not in session:
+        return redirect('/login')
+
+    total_users = User.query.count()
+
+    total_employees = Employee.query.count()
+
+    total_messages = Contact.query.count()
+
+    return render_template(
+
+        'admin.html',
+
+        user=session['user'],
+
+        total_users=total_users,
+
+        total_employees=total_employees,
+
+        total_messages=total_messages
+    )
